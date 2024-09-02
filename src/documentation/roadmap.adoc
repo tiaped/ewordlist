@@ -1,0 +1,18 @@
+= WordList roadmap
+Pierre Struve <pierre@struve.xyz>
+1.0, 2024/08/31: AsciiDoc article template
+:toc:
+:icons: font
+
+Describes the roadmap for this project
+
+== M1 - CRUD on lists
+
+== M2 - CRUD on lists of lists
+
+== M3 - CRUD on list of words
+
+== M4 - CRUD on lists of lists and words
+
+== M5 - get all words of a list of lists and words
+
