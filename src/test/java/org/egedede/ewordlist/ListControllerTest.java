@@ -19,8 +19,13 @@ public class ListControllerTest {
 
   @Test
   public void saveAndGetList() {
-    this.restTemplate.put("http://localhost:"+port+"/list?list=testList", null);
-    assertThat(this.restTemplate.getForObject("http://localhost:"+port+"/list/testList", String.class))
+    String listEndpoint = "http://localhost:" + port + "/list";
+    assertThat(this.restTemplate.getForEntity(listEndpoint + "/testList", String.class)
+        .getStatusCode().value())
+        .isEqualTo(404)
+        ;
+    this.restTemplate.put(listEndpoint + "?list=testList", null);
+    assertThat(this.restTemplate.getForObject(listEndpoint + "/testList", String.class))
         .containsAnyOf("testList");
   }
 }
