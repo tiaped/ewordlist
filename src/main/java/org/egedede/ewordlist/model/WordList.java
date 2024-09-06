@@ -1,4 +1,4 @@
-package org.egedede.ewordlist;
+package org.egedede.ewordlist.model;
 
 import jakarta.persistence.*;
 
